@@ -49,7 +49,7 @@ function loadPurchaseData() {
     totalRevenue += purchase.unitPrice * purchase.quantity;
   });
 
-  // Exibe o total de receita
+
   document.getElementById("totalRevenue").textContent = totalRevenue.toFixed(2);
 }
 
@@ -70,7 +70,7 @@ function initLoginChart() {
   const loginsPorDia = JSON.parse(localStorage.getItem("loginsPorDia")) || [0, 0, 0, 0, 0, 0, 0];
 
   if (window.loginChart) {
-    window.loginChart.destroy(); // Remove gráfico anterior, se houver
+    window.loginChart.destroy(); 
   }
 
   window.loginChart = new Chart(ctx, {
@@ -97,7 +97,7 @@ function initLoginChart() {
   });
 }
 
-// Atualiza ao carregar a página do analista
+
 document.addEventListener("DOMContentLoaded", function () {
   initLoginChart(); 
 });
