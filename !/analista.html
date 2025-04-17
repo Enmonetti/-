@@ -60,7 +60,7 @@
   </div>
 
   <script>
-    // Gráfico de logins por dia da semana
+
     const loginWeekCount = JSON.parse(localStorage.getItem("loginsPorDia")) || [0, 0, 0, 0, 0, 0, 0];
     const loginWeekChart = document.getElementById("loginWeekChart").getContext("2d");
 
@@ -85,7 +85,6 @@
       }
     });
 
-    // Carregar os dados dos clientes na tabela com 30 linhas
     function loadClientData() {
       const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
       const tbody = document.getElementById('clientTableBody');
@@ -117,19 +116,19 @@
       }
     }
 
-    // Mostrar/ocultar detalhes dos clientes
+
     function expandClientInfo() {
       const details = document.getElementById("clientDetails");
       details.classList.toggle("hidden");
     }
 
-    // Mostrar/ocultar detalhes das compras
+
     function expandPurchaseInfo() {
       const details = document.getElementById("purchaseDetails");
       details.classList.toggle("hidden");
     }
 
-    // Apagar os dados dos clientes
+
     function apagarDadosClientes() {
       if (confirm("Tem certeza que deseja apagar todos os dados dos clientes?")) {
         localStorage.removeItem('clientes');
@@ -138,7 +137,7 @@
       }
     }
 
-    // Ao carregar a página
+ 
     window.onload = () => {
       loadClientData();
     };
