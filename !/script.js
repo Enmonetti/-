@@ -51,7 +51,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
   if (usuario) {
     logins += 1;
     localStorage.setItem('logins', JSON.stringify(logins));
-    window.location.href = 'teste.html';  // <- Alterado aqui
+    window.location.href = 'teste.html';  
   } else {
     alert("Usuário ou senha incorretos.");
   }
